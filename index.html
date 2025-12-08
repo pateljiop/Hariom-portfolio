@@ -3,127 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of HARIOM, a BCA student specializing in Python and web development.">
-    <meta name="keywords" content="HARIOM, BCA, Python, Web Development, Portfolio">
-    <title>HARIOM - Portfolio</title>
+    <title>Hariom - BCA Student & Aspiring Developer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">HARIOM</div>
-            <ul>
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Hariom</h1>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#internships">Internships</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+            <button id="theme-toggle" class="btn secondary"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
 
-    <section id="hero">
+    <div class="scroll-indicator">
+        <div class="dot active" data-section="hero"></div>
+        <div class="dot" data-section="about"></div>
+        <div class="dot" data-section="education"></div>
+        <div class="dot" data-section="internships"></div>
+        <div class="dot" data-section="skills"></div>
+        <div class="dot" data-section="projects"></div>
+        <div class="dot" data-section="hobbies"></div>
+        <div class="dot" data-section="contact"></div>
+    </div>
+
+    <section id="hero" class="section">
         <div class="hero-content">
-            <img src="profile.jpg" alt="HARIOM's Profile Photo" class="profile-img"> <!-- Replace with your image -->
-            <h1>Hello, I'm HARIOM</h1>
-            <p>Motivated BCA student with hands-on experience in Python and web development.</p>
-            <a href="resume.pdf" download class="btn">Download Resume</a> <!-- Replace with your PDF link -->
+            <h1>Hi, I'm Hariom — BCA Student & Aspiring Developer</h1>
+            <p>Learning Python, C, and Web Development while building real projects and exploring IT.</p>
+            <div class="buttons">
+                <a href="#projects" class="btn primary">View My Projects</a>
+                <a href="https://linkedin.com/in/yourprofile" class="btn secondary" target="_blank">Connect on LinkedIn</a>
+                <a href="path/to/your-resume.pdf" class="btn outline" download>Download Resume</a>
+            </div>
+        </div>
+        <div class="hero-bg"></div>
+        <div class="particles"></div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <i class="fas fa-user section-icon"></i>
+            <h2>About Me</h2>
+            <p>I’m a motivated BCA student (3rd semester) with hands-on experience in Python programming and basic web development. Through multiple internships, I have gained practical exposure to coding, problem-solving, and IT fundamentals. I am disciplined, eager to learn, and always looking for opportunities to improve my technical skills.</p>
+            <div class="info-grid">
+                <div class="info-card"><strong>Name:</strong> Hariom</div>
+                <div class="info-card"><strong>Degree:</strong> BCA (3rd Semester)</div>
+                <div class="info-card"><strong>Location:</strong> Ballia, Uttar Pradesh</div>
+                <div class="info-card"><strong>Email:</strong> ahuzahariom@gmail.com</div>
+            </div>
         </div>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Motivated BCA student (3rd semester) with hands-on experience in Python programming and web development. Completed multiple internships, gaining practical knowledge in coding, problem-solving, and IT fundamentals. Strong communication skills, disciplined work ethic, and ability to learn quickly.</p>
-        <p>Hobbies: Playing Kabaddi for teamwork and discipline, listening to music for relaxation, and staying updated with current affairs and technology news.</p>
-        <p>Personal Details: Date of Birth: 25 December 2004 | Father's Name: Shri Ram Bharat Patel | Gender: Male | Nationality: Indian | Languages: English, Hindi</p>
-    </section>
-
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill">Python (Basics)</div>
-            <div class="skill">C Language (Basics)</div>
-            <div class="skill">HTML & CSS (Beginner)</div>
-            <div class="skill">MS Word, MS Excel, MS PowerPoint</div>
-            <div class="skill">Computer Fundamentals</div>
-            <div class="skill">Troubleshooting & Basic Networking</div>
+    <section id="education" class="section">
+        <div class="container">
+            <i class="fas fa-graduation-cap section-icon"></i>
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>BCA – Bachelor of Computer Applications</h3>
+                    <p>Prof. Rajju Bhaiya University, Prayagraj<br>Currently pursuing – 3rd Semester</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Diploma in Electrician</h3>
+                    <p>Completed</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>12th (CBSE Board)</h3>
+                    <p>2022</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>10th (CBSE Board)</h3>
+                    <p>2020</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Python Calculator Program</h3>
-            <p>A simple command-line calculator using functions and conditional logic.</p>
-            <a href="#" class="btn">View Code</a> <!-- Link to GitHub or demo -->
-        </div>
-        <div class="project">
-            <h3>Student Record System (C Language)</h3>
-            <p>A file-handling based program to manage and retrieve student records.</p>
-            <a href="#" class="btn">View Code</a>
-        </div>
-        <div class="project">
-            <h3>Basic Web Page Design (HTML/CSS)</h3>
-            <p>Designed a responsive webpage during internship training.</p>
-            <a href="#" class="btn">View Demo</a>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2>Internship Experience</h2>
-        <div class="experience-item">
-            <h3>Python Programming Intern — InternPE</h3>
-            <p>Feb 2024 – Mar 2024</p>
-            <p>Learned Python fundamentals including loops, functions, and file handling. Completed structured tasks to build logical thinking and coding skills.</p>
-        </div>
-        <div class="experience-item">
-            <h3>Python Programming Intern — CodSoft</h3>
-            <p>Jan 2024 – Feb 2024</p>
-            <p>Developed mini Python projects during the internship. Improved debugging and problem-solving techniques.</p>
-        </div>
-        <div class="experience-item">
-            <h3>Web Development Intern — Prodigy InfoTech</h3>
-            <p>Mar 2024</p>
-            <p>Worked on HTML, CSS, and basic JavaScript concepts. Created simple responsive web layouts and UI components.</p>
+    <section id="internships" class="section">
+        <div class="container">
+            <i class="fas fa-briefcase section-icon"></i>
+            <h2>Internship Experience</h2>
+            <div class="internship-cards">
+                <div class="card">
+                    <h3>Python Programming Intern — InternPE</h3>
+                    <p>Feb 2024 – Mar 2024</p>
+                    <ul>
+                        <li>Learned Python fundamentals including loops, functions, and file handling.</li>
+                        <li>Completed structured tasks to build logical thinking and coding skills.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Python Programming Intern — CodSoft</h3>
+                    <p>Jan 2024 – Feb 2024</p>
+                    <ul>
+                        <li>Developed mini Python projects during the internship.</li>
+                        <li>Improved debugging and problem-solving techniques.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Web Development Intern — Prodigy InfoTech</h3>
+                    <p>Mar 2024</p>
+                    <ul>
+                        <li>Worked on HTML, CSS, and basic JavaScript concepts.</li>
+                        <li>Created simple responsive web layouts and UI components.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="education-item">
-            <h3>Bachelor of Computer Applications (BCA)</h3>
-            <p>Prof. Rajju Bhaiya University, Prayagraj (Currently pursuing – 3rd Semester)</p>
-        </div>
-        <div class="education-item">
-            <h3>Diploma in Electrician – Completed</h3>
-            <p>[Institution Name, if available]</p>
-        </div>
-        <div class="education-item">
-            <h3>12th (CBSE Board) – 2022</h3>
-        </div>
-        <div class="education-item">
-            <h3>10th (CBSE Board) – 2020</h3>
+    <section id="skills" class="section">
+        <div class="container">
+            <i class="fas fa-tools section-icon"></i>
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <i class="fab fa-python"></i>
+                    <span>Programming: Python (Basics), C Language (Basics)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-code"></i>
+                    <span>Web: HTML & CSS (Beginner)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-file-word"></i>
+                    <span>Tools: MS Word, MS Excel, MS PowerPoint</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-network-wired"></i>
+                    <span>IT Skills: Computer Fundamentals, Troubleshooting & Basic Networking</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Address: Village: Gauwapar, Post: Gauwapar, District: Ballia, Uttar Pradesh – 221718</p>
-        <p>Phone: +91. [Your Number]</p>
-        <p>Email: ahuzahariom@gmail.com</p>
-        <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+    <section id="projects" class="section">
+        <div class="container">
+            <i class="fas fa-project-diagram section-icon"></i>
+            <h2>Projects</h2>
+            <div class="project-cards">
+                <div class="card">
+                    <h3>Python Calculator Program</h3>
+                    <p>A simple command-line calculator using functions and conditional logic.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Student Record System (C Language)</h3>
+                    <p>A file-handling based program to manage and retrieve student records.</p>
+                    <div class="tags">
+                        <span>C</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Basic Web Page Design (HTML/CSS)</h3>
+                    <p>Designed a responsive webpage during internship training.</p>
+                    <div class="tags">
+                        <span>HTML</span> <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 HARIOM. All rights reserved.</p>
+    <section id="hobbies" class="section">
+        <div class="container">
+            <i class="fas fa-heart section-icon"></i>
+            <h2>Hobbies & Interests</h2>
+            <div class="hobbies-list">
+                <div class="hobby-item">
+                    <i class="fas fa-users"></i>
+                    <span>Playing Kabaddi (teamwork & discipline)</span>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-music"></i>
+                    <span>Listening to music (relaxation & focus)</span>
+                </div>
+                <div class="hobby-item">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Staying updated with current affairs and technology news</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="section">
+        <div class="container">
+            <i class="fas fa-envelope section-icon"></i>
+            <h2>Contact</h2>
+            <p>Interested in working with me or offering guidance? Let’s connect!</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> ahuzahariom@gmail.com</p>
+                <p><strong>Phone:</strong> +91 ..........</p>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:ahuzahariom@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <a href="https://linkedin.com/in/yourprofile" class="btn primary" target="_blank">View LinkedIn Profile</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hariom. All rights reserved.</p>
+        </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
