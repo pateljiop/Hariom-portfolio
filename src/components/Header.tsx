@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import AppLogo from '@/components/ui/AppLogo';
+import AppLogo from '../components/ui/AppLogo';
 
 const NAV_ITEMS = [
   { label: 'Home', href: '#home' },
