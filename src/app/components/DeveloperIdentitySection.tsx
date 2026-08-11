@@ -1,7 +1,48 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function DeveloperIdentitySection() {
+  // 1. Set up the state to hold your live stats (default is the dash)
+  const [githubStats, setGithubStats] = useState<Record<string, string | number>>({
+    'Repositories': '—',
+    'Commits': '—',
+    'Stars': '—'
+  });
+
+  // 2. Fetch the actual data from GitHub when the page loads
+  useEffect(() => {
+    async function fetchStats() {
+      try {
+        // Fetch Total Repositories
+        const userRes = await fetch('https://api.github.com/users/pateljiop');
+        const userData = await userRes.json();
+        
+        // Fetch Total Stars (sums up stars across all your public repos)
+        const reposRes = await fetch('https://api.github.com/users/pateljiop/repos?per_page=100');
+        const reposData = await reposRes.json();
+        const totalStars = Array.isArray(reposData) 
+          ? reposData.reduce((acc: number, repo: any) => acc + repo.stargazers_count, 0)
+          : '—';
+
+        // Fetch Total Commits (using GitHub Search API)
+        const commitsRes = await fetch('https://api.github.com/search/commits?q=author:pateljiop');
+        const commitsData = await commitsRes.json();
+        const totalCommits = commitsData.total_count !== undefined ? commitsData.total_count : '—';
+
+        // Update the state with real numbers
+        setGithubStats({
+          'Repositories': userData.public_repos !== undefined ? userData.public_repos : '—',
+          'Commits': totalCommits,
+          'Stars': totalStars
+        });
+      } catch (error) {
+        console.error("Error fetching GitHub stats", error);
+      }
+    }
+    
+    fetchStats();
+  }, []);
+
   return (
     <section id="identity" className="py-24 px-6 md:px-12 relative">
       <div className="section-divider mb-16" />
@@ -127,17 +168,17 @@ export default function DeveloperIdentitySection() {
               </div>
             </div>
 
-            {/* GitHub stats placeholder */}
+            {/* Live GitHub Stats */}
             <div className="glass border border-border rounded-2xl p-6 border-glow-hover">
               <p className="font-mono text-xs text-muted-foreground tracking-widest uppercase mb-4">GitHub Activity</p>
               <p className="font-mono text-xs text-muted-foreground italic mb-4">
-                <span className="syntax-comment">// Real GitHub stats can be added here when ready.</span>
+                <span className="syntax-comment">// Real-time stats fetched from API</span>
               </p>
               <div className="grid grid-cols-3 gap-3">
                 {['Repositories', 'Commits', 'Stars']?.map((stat) => (
                   <div key={stat} className="glass-light border border-border/50 rounded-xl p-3 text-center">
                     <p className="font-mono text-xs text-muted-foreground mb-1">{stat}</p>
-                    <p className="font-mono text-sm text-foreground font-semibold">—</p>
+                    <p className="font-mono text-sm text-foreground font-semibold">{githubStats[stat]}</p>
                   </div>
                 ))}
               </div>
