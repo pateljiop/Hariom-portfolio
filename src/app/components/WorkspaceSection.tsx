@@ -195,7 +195,7 @@ export default function WorkspaceSection() {
           </div>
 
           {/* Daily Routine */}
-          <div className="reveal stagger-6 glass border border-border rounded-2xl p-6 border-glow-hover tilt-card">
+          <div className="hidden reveal stagger-6 glass border border-border rounded-2xl p-6 border-glow-hover tilt-card">
             <div className="flex items-center gap-2 mb-5">
               <div className="w-2 h-2 rounded-full bg-accent status-dot" />
               <span className="font-mono text-xs text-muted-foreground tracking-widest uppercase">Daily Routine</span>
