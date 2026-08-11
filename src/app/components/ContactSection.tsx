@@ -4,12 +4,33 @@ import React, { useState } from 'react';
 export default function ContactSection() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setForm({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    setError(false);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        setForm({ name: '', email: '', message: '' });
+        setTimeout(() => setSubmitted(false), 4000);
+      } else {
+        setError(true);
+      }
+    } catch (err) {
+      setError(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -66,6 +87,12 @@ export default function ContactSection() {
                     <p className="font-mono text-sm text-accent">✓ Message sent successfully!</p>
                   </div>
                 )}
+                
+                {error && (
+                  <div className="glass border border-red-500/40 rounded-xl p-4 text-center">
+                    <p className="font-mono text-sm text-red-400">✗ Failed to send. Please try again.</p>
+                  </div>
+                )}
 
                 <div>
                   <label className="font-mono text-xs text-muted-foreground tracking-widest uppercase block mb-2">
@@ -114,12 +141,15 @@ export default function ContactSection() {
 
                 <button
                   type="submit"
-                  className="w-full magnetic-btn bg-primary text-primary-foreground py-3.5 rounded-xl font-semibold text-sm tracking-wide hover:shadow-lg transition-all duration-300 glow-cyan flex items-center justify-center gap-2"
+                  disabled={isSubmitting}
+                  className="w-full magnetic-btn bg-primary text-primary-foreground py-3.5 rounded-xl font-semibold text-sm tracking-wide hover:shadow-lg transition-all duration-300 glow-cyan flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <span>Send Message</span>
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
+                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                  {!isSubmitting && (
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                  )}
                 </button>
               </form>
             </div>
