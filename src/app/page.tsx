@@ -10,6 +10,7 @@ import ProjectsSection from './components/ProjectsSection';
 import EducationSection from './components/EducationSection';
 import DeveloperIdentitySection from './components/DeveloperIdentitySection';
 import LiveFeedSection from './components/LiveFeedSection';
+import GithubSection from './components/GithubSection';
 import ContactSection from './components/ContactSection';
 import ScrollObserver from './components/ScrollObserver';
 import ParticleBackground from './components/ParticleBackground';
@@ -45,6 +46,7 @@ export default function HomePage() {
         <EducationSection />
         <DeveloperIdentitySection />
         <LiveFeedSection />
+        <GithubSection />
         <ContactSection />
       </main>
 
