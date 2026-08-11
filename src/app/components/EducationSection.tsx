@@ -56,7 +56,7 @@ export default function EducationSection() {
                     <div className="git-line flex-1 mt-2" style={{ minHeight: '80px' }} />
                   </div>
                   <div>
-                    <p className="text-accent text-xs mb-1">2022 — 2024</p>
+                    <p className="text-accent text-xs mb-1">2022</p>
                     <p className="text-foreground font-semibold">Higher Secondary (12th)</p>
                     <p className="text-muted-foreground text-xs mt-1">Completed</p>
                     <div className="flex gap-2 mt-3">
@@ -70,7 +70,7 @@ export default function EducationSection() {
                     <div className="w-3 h-3 rounded-full bg-secondary shrink-0 mt-1" />
                   </div>
                   <div>
-                    <p className="text-secondary text-xs mb-1">2020 — 2022</p>
+                    <p className="text-secondary text-xs mb-1">2020</p>
                     <p className="text-foreground font-semibold">Secondary (10th)</p>
                     <p className="text-muted-foreground text-xs mt-1">Completed</p>
                     <div className="flex gap-2 mt-3">
@@ -84,7 +84,7 @@ export default function EducationSection() {
 
           {/* Education detail card + certifications */}
           <div className="reveal-right stagger-2 space-y-6">
-            <div className="glass border border-primary/20 rounded-2xl p-8 glow-cyan tilt-card">
+            <div className="hidden glass border border-primary/20 rounded-2xl p-8 glow-cyan tilt-card">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center">
                   <span className="text-primary text-2xl">🎓</span>
