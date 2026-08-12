@@ -36,6 +36,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
   },
+  // Yahan Google Site Verification add kar diya gaya hai
+  verification: {
+    google: 'yKWRx6xDyhBiOY9X3_IOySFlVa7JZ823bUBKD4ljvw0',
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -45,7 +49,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {children}
 
         <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fhariomport2613back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.20" />
-        <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2" /></body>
+        <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2" />
+      </body>
     </html>
   );
 }
