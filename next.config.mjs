@@ -2,8 +2,8 @@ import { imageHosts } from './image-hosts.config.mjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // Cloudflare static export ke liye yeh sabse zaroori hai
   productionBrowserSourceMaps: true,
-  distDir: process.env.DIST_DIR || '.next',
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -13,7 +13,7 @@ const nextConfig = {
   images: {
     remotePatterns: imageHosts,
     minimumCacheTTL: 60,
-    qualities: [75, 85, 100],
+    unoptimized: true, // Static export ke sath image optimization ke liye zaroori hai
   },
   webpack(
     config,
@@ -42,4 +42,5 @@ const nextConfig = {
     return config;
   },
 };
+
 export default nextConfig;
