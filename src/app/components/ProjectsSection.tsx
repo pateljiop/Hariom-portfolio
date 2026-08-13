@@ -16,60 +16,68 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    title: 'Automated Live Market Tracker',
-    description: 'Real-time market data tracking utility that fetches live financial parameters via REST APIs with automated daily updates.',
+    title: 'Expense Tracker',
+    description:
+      'Responsive personal finance dashboard for tracking income, expenses, balances, categories and transaction history.',
     highlights: [
-      'Engineered in Python to fetch live financial data via REST APIs',
-      'GitHub Actions CI/CD with scheduled cron jobs for daily automation',
+      'Built with HTML, CSS and JavaScript with LocalStorage-based data persistence',
+      'Implemented transaction management, filtering, CSV export and responsive dashboard UI',
     ],
-    tags: ['Python', 'REST APIs', 'GitHub Actions', 'CI/CD'],
-    status: 'completed',
-    statusLabel: 'Completed',
+    tags: ['HTML', 'CSS', 'JavaScript', 'LocalStorage'],
+    status: 'live',
+    statusLabel: 'Live',
     color: '#39FF14',
-    icon: '📈',
-    githubUrl: 'https://github.com/pateljiop',
+    icon: '💰',
+    githubUrl: 'https://github.com/pateljiop/Expense-Tracker',
+    liveUrl: 'https://pateljiop.github.io/Expense-Tracker/',
   },
+
   {
-    title: 'AI-Powered Personal Assistant',
-    description: 'Python-based utility assistant that automates routine OS tasks and executes system commands using AI API integration.',
+    title: 'Python Personal Assistant',
+    description:
+      'Python-based command-line personal assistant for common desktop automation and system utilities.',
     highlights: [
-      'Automates routine OS tasks and system command execution',
-      'Integrated external AI API endpoints with prompt-based decision workflows',
+      'Implemented OOP-based command processing, file operations and system utilities',
+      'Added browser and application launching, error handling and safety checks',
     ],
-    tags: ['Python', 'AI API', 'Automation', 'OOPs'],
+    tags: ['Python', 'OOP', 'Automation', 'File Handling'],
     status: 'completed',
     statusLabel: 'Completed',
     color: '#8B5CF6',
     icon: '🤖',
-    githubUrl: 'https://github.com/pateljiop',
+    githubUrl: 'https://github.com/pateljiop/AI-Personal-Assistant',
   },
+
   {
-    title: 'Web Scraper & Data Utility Pipelines',
-    description: 'Automated web scraping scripts that extract public web data at scale and structure it into clean CSV/JSON datasets.',
+    title: 'Web Scraper & Data Utility Pipeline',
+    description:
+      'Python web scraper that extracts public webpage titles, headings and links and exports structured CSV and JSON data.',
     highlights: [
-      'Built with BeautifulSoup & Requests for large-scale data extraction',
-      'Structures raw HTML into validated CSV and JSON for downstream analysis',
+      'Built with Requests and BeautifulSoup for HTML fetching and parsing',
+      'Implemented data cleaning, URL normalization and CSV/JSON export',
     ],
-    tags: ['Python', 'BeautifulSoup', 'Requests', 'Pandas'],
+    tags: ['Python', 'BeautifulSoup', 'Requests', 'CSV', 'JSON'],
     status: 'completed',
     statusLabel: 'Completed',
     color: '#00D4FF',
     icon: '🕷️',
-    githubUrl: 'https://github.com/pateljiop',
+    githubUrl: 'https://github.com/pateljiop/Web-Scraper-Tool',
   },
+
   {
     title: 'Self-Updating Developer Portfolio',
-    description: 'Responsive single-page web application with dark mode, CSS animations, and an automated Python backend that auto-fetches tech feeds daily.',
+    description:
+      'Responsive developer portfolio with custom styling, interactive sections and an automated Python-based update workflow.',
     highlights: [
-      'Custom dark mode, continuous CSS animations, interactive code windows',
-      'Python backend script auto-fetches fresh tech feeds via GitHub Actions',
+      'Built a responsive portfolio using HTML, CSS and JavaScript',
+      'Added a Python update script for automating portfolio content updates',
     ],
     tags: ['HTML', 'CSS', 'JavaScript', 'Python', 'GitHub Actions'],
     status: 'live',
     statusLabel: 'Live',
     color: '#FF79C6',
     icon: '🌐',
-    githubUrl: 'https://github.com/pateljiop',
+    githubUrl: 'https://github.com/pateljiop/Hariom-Professional-Portfolio',
     liveUrl: 'https://pateljiop.github.io/Hariom-Professional-Portfolio',
   },
 ];
