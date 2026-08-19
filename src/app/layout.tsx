@@ -31,9 +31,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
-  title: 'Hariom — BCA Student & Aspiring Developer',
-  description: 'Personal portfolio of Hariom, a BCA student exploring programming and web development. Honest beginner building skills one project at a time.',
-  icons: {
+  title: 'pateljiop — Hariom Patel | Python Developer',
+description: 'Official portfolio of pateljiop (Hariom Patel), a BCA student and Python developer building projects in web development and software.',  icons: {
     icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
   },
   // Yahan Google Site Verification add kar diya gaya hai
