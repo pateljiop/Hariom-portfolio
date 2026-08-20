@@ -13,11 +13,11 @@ import LiveFeedSection from './components/LiveFeedSection';
 import ContactSection from './components/ContactSection';
 import ScrollObserver from './components/ScrollObserver';
 import ParticleBackground from './components/ParticleBackground';
+import BrandMark from './components/BrandMark';
 
 export default function HomePage() {
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden">
-      {/* Vertical grid lines (T2 technique) */}
       <div className="vertical-grid hidden md:flex">
         <div className="vertical-grid-line" />
         <div className="vertical-grid-line" />
@@ -25,16 +25,15 @@ export default function HomePage() {
         <div className="vertical-grid-line" />
       </div>
 
-      {/* Noise overlay */}
       <div className="noise-overlay fixed inset-0 z-[1] pointer-events-none" />
-
-      {/* Particle background */}
       <ParticleBackground />
 
-      {/* Navigation */}
+      <div className="fixed bottom-5 left-5 z-40 hidden md:block rounded-2xl border border-primary/20 bg-background/80 px-3 py-2 backdrop-blur-xl shadow-lg">
+        <BrandMark compact />
+      </div>
+
       <Header />
 
-      {/* Main content */}
       <main className="relative z-10">
         <HeroSection />
         <AboutSection />
