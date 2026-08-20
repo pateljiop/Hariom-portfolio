@@ -1,6 +1,5 @@
-# Node modules
+# Dependencies
 node_modules/
-package-lock.json
 
 # Next.js build output
 .next/
@@ -8,6 +7,11 @@ out/
 
 # Production build
 build/
+
+# Environment variables
+.env
+.env.*
+!.env.example
 
 # Logs
 npm-debug.log*
@@ -22,16 +26,16 @@ Thumbs.db
 # Vercel deployment
 .vercel/
 
-# Optional: if using TypeScript
+# Optional: TypeScript build info
 *.tsbuildinfo
 
-# Optional: if using testing tools
+# Testing
 coverage/
 jest-test-results.json
 
-# Optional: if using IDEs
+# IDEs
 .vscode/
 .idea/
 
-# Optional: if using TurboRepo or monorepo
+# TurboRepo
 turbo/
