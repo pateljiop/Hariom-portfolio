@@ -14,7 +14,7 @@ const services = [
 ];
 
 const projects = [
-  { title: 'Masonry & Roofing Website', type: 'Business Website Concept', repo: 'pateljiop/Demo', href: 'https://github.com/pateljiop/Demo' },
+  { title: 'Masonry & Roofing Website', type: 'Business Website Concept', repo: 'pateljiop/Demo', href: 'https://pateljiop.github.io/Demo/' },
   { title: 'Laundry Service Website', type: 'Local Business Concept', repo: 'pateljiop/Laundry-demo', href: 'https://pateljiop.github.io/Laundry-demo/' },
   { title: 'Roofing Website', type: 'Service Business Concept', repo: 'pateljiop/Roofing-demo', href: 'https://github.com/pateljiop/Roofing-demo' },
   { title: 'Property Maintenance Website', type: 'Service Business Concept', repo: 'pateljiop/mek-property-maintenance-demo', href: 'https://pateljiop.github.io/mek-property-maintenance-demo/' },
