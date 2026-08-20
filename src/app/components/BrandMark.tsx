@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function BrandMark({ compact = false }: { compact?: boolean }) {
   return (
-    <div className={`flex items-center gap-3 ${compact ? '' : 'py-1'}`} aria-label="Hariom Patel brand">
+    <div className={`flex items-center gap-3 ${compact ? '' : 'py-1'}`} aria-label="Hariom brand">
       <svg viewBox="0 0 64 64" className="h-10 w-10 shrink-0" role="img" aria-hidden="true">
         <defs>
           <linearGradient id="hp-brand-ring" x1="0" x2="1" y1="0" y2="1">
@@ -19,12 +19,12 @@ export default function BrandMark({ compact = false }: { compact?: boolean }) {
         <circle cx="25" cy="27" r="1.5" fill="#00D2FF" /><circle cx="39" cy="27" r="1.5" fill="#00D2FF" />
         <path d="M28 37c2 2 6 2 8 0" fill="none" stroke="#111827" strokeWidth="2" strokeLinecap="round" />
         <path d="M25 46h14" stroke="#FF2055" strokeWidth="3" strokeLinecap="round" />
-        <text x="32" y="52" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="800" fill="#fff">HP</text>
+        <text x="32" y="52" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="800" fill="#fff">H</text>
       </svg>
       {!compact && (
         <div className="leading-none">
-          <div className="font-display text-base font-bold tracking-tight text-foreground">Hariom <span className="text-primary">Patel</span></div>
-          <div className="mt-1 font-mono text-[9px] tracking-[0.18em] text-muted-foreground uppercase">Freelance Web Developer</div>
+          <div className="font-display text-base font-bold tracking-tight text-foreground">Hariom</div>
+          <div className="mt-1 font-mono text-[9px] tracking-[0.18em] text-muted-foreground uppercase">Web Developer</div>
         </div>
       )}
     </div>
