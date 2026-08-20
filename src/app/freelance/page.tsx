@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import BrandMark from '../components/BrandMark';
 
 const services = [
@@ -83,11 +83,13 @@ export default function FreelancePage() {
         </section>
 
         <section id="contact" className="mx-auto max-w-6xl px-6 pb-28">
-          <div className="rounded-3xl border border-primary/25 bg-primary/5 p-8 text-center md:p-16">
-            <BrandMark />
-            <h2 className="mx-auto mt-8 max-w-3xl text-4xl font-black md:text-6xl">Have something worth building?</h2>
-            <p className="mx-auto mt-5 max-w-xl text-muted-foreground">Tell me what you need, what you are trying to achieve, and I’ll help turn it into a practical solution.</p>
-            <Link href="/#contact" className="mt-8 inline-flex rounded-xl bg-primary px-7 py-3 font-semibold text-primary-foreground">Start a Project</Link>
+          <div className="rounded-3xl border border-primary/25 bg-primary/5 p-8 md:p-16">
+            <div className="flex flex-col items-center text-center">
+              <BrandMark />
+              <h2 className="mx-auto mt-8 max-w-3xl text-4xl font-black md:text-6xl">Have something worth building?</h2>
+              <p className="mx-auto mt-5 max-w-xl text-muted-foreground">Tell me what you need, what you are trying to achieve, and I’ll help turn it into a practical solution.</p>
+              <Link href="/#contact" className="mt-8 inline-flex rounded-xl bg-primary px-7 py-3 font-semibold text-primary-foreground">Start a Project</Link>
+            </div>
           </div>
         </section>
       </main>
