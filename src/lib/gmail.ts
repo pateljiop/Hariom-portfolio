@@ -29,7 +29,7 @@ function buildAuthUrl() {
 }
 
 export function getOAuthClient() {
-  const { clientId, clientSecret, redirectUri } = getGoogleConfig();
+  const { clientId, redirectUri } = getGoogleConfig();
 
   return {
     generateAuthUrl: () => buildAuthUrl(),
@@ -40,7 +40,7 @@ export function getOAuthClient() {
         body: new URLSearchParams({
           code,
           client_id: clientId,
-          client_secret: clientSecret,
+          client_secret: process.env.GOOGLE_CLIENT_SECRET || '',
           redirect_uri: redirectUri,
           grant_type: 'authorization_code',
         }),
