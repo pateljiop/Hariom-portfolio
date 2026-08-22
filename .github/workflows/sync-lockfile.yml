@@ -1,12 +1,7 @@
 name: Sync npm lockfile
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - package.json
-      - package-lock.json
-      - .github/workflows/sync-lockfile.yml
+  workflow_dispatch:
 
 permissions:
   contents: write
