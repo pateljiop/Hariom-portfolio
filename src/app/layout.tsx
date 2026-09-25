@@ -102,7 +102,12 @@ const structuredData = {
       alternateName: ['pateljiop', '@pateljiop'],
       url: siteUrl,
       jobTitle: 'Web Developer',
+      description:
+        'Hariom Patel, also known online as pateljiop, is the creator of Hariom Builds and builds websites, Python tools, AI-assisted solutions and automation.',
       identifier: 'pateljiop',
+      mainEntityOfPage: {
+        '@id': `${siteUrl}/#website`,
+      },
       sameAs: [
         'https://github.com/pateljiop',
         'https://linkedin.com/in/pateljiop',
@@ -117,7 +122,9 @@ const structuredData = {
       '@type': 'Brand',
       '@id': `${siteUrl}/#brand`,
       name: 'Hariom Builds',
+      alternateName: ['pateljiop', 'Hariom Patel'],
       url: siteUrl,
+      keywords: 'Hariom Builds, Hariom Patel, pateljiop, web developer, Python, AI automation',
       description:
         'Personal technology brand of Hariom Patel focused on web development, Python, AI-assisted solutions and automation.',
     },
@@ -125,6 +132,7 @@ const structuredData = {
       '@type': 'WebSite',
       '@id': `${siteUrl}/#website`,
       name: 'Hariom Builds',
+      alternateName: ['pateljiop', 'Hariom Patel'],
       url: siteUrl,
       publisher: {
         '@id': `${siteUrl}/#person`,
