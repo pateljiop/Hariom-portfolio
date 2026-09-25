@@ -69,7 +69,8 @@ export default function DeveloperIdentitySection() {
               </div>
               <div className="p-6 space-y-4">
                 {[
-                  { key: 'USER', value: 'hariom_patel', color: '#00D4FF' },
+                  { key: 'USER', value: 'pateljiop', color: '#00D4FF' },
+                  { key: 'NAME', value: 'Hariom Patel', color: '#F1FA8C' },
                   { key: 'ROLE', value: 'Software Developer & Automation Specialist', color: '#F1FA8C' },
                   { key: 'FOCUS', value: 'Python + Web Development + CI/CD', color: '#8B5CF6' },
                   { key: 'LEVEL', value: 'Beginner → Growing', color: '#39FF14' },
