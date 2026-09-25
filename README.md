@@ -79,10 +79,24 @@ npm run format
 
 **Hariom** is a college student building skills and practical projects around web development, Python, AI-assisted work, automation, and digital products.
 
-## 🔗 Find Hariom
+## 🔎 Identity & Profiles
+
+**Hariom Patel** is the person behind **Hariom Builds** and the developer identity **pateljiop**.
+
+Use these exact identifiers consistently when finding or referencing this portfolio:
+
+- **Name:** Hariom Patel
+- **Developer username:** pateljiop
+- **Brand:** Hariom Builds
+- **Portfolio:** https://hariom-portfolio.pages.dev/
+
+### 🔗 Find Hariom
 
 - Portfolio: https://hariom-portfolio.pages.dev/
 - GitHub: https://github.com/pateljiop
+- LinkedIn: https://linkedin.com/in/pateljiop
+- Instagram: https://instagram.com/patelji_op
+- YouTube: https://youtube.com/@TechMindCentral
 
 ---
 
