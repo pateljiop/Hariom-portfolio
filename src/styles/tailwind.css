@@ -389,3 +389,228 @@
     animation: log-appear 0.5s ease forwards;
   }
 }
+
+/* =========================================================
+   RESPONSIVE OVERFLOW & LAYOUT HARDENING
+   Desktop • Tablet • Mobile
+   ========================================================= */
+
+@layer base {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  section,
+  main,
+  header,
+  footer,
+  nav,
+  [class*="grid"],
+  [class*="flex"] {
+    min-width: 0;
+  }
+
+  .terminal-window,
+  .glass,
+  .about-card,
+  .about-code-editor,
+  .hero-terminal {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .about-section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .about-code-editor {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .about-code-lines {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .about-code-line {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-code-text {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .about-info-row {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .about-info-value {
+    min-width: 0;
+    max-width: 70%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .hero-terminal {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-terminal-line {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+/* Tablet: keep two-column sections, but allow every child to shrink */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about-section,
+  .about-section > div {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .about-code-text {
+    font-size: 0.78rem;
+  }
+
+  .about-code-lines {
+    padding: 0.75rem;
+  }
+
+  .about-info-value {
+    max-width: 62%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .about-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .about-section .max-w-7xl {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-section .grid {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .about-code-editor,
+  .about-card,
+  .hero-terminal {
+    border-radius: 1rem;
+  }
+
+  .about-code-lines {
+    padding: 0.75rem;
+  }
+
+  .about-code-line {
+    align-items: flex-start;
+  }
+
+  .about-code-text {
+    display: block;
+    white-space: pre-wrap !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.55;
+    font-size: clamp(0.68rem, 2.7vw, 0.82rem);
+    padding-left: 0.4rem;
+    padding-right: 0;
+  }
+
+  .about-code-line .line-number {
+    min-width: 1.7rem;
+    width: 1.7rem;
+    padding-right: 0.4rem;
+    font-size: 0.65rem;
+    flex-shrink: 0;
+  }
+
+  .about-card {
+    padding: 1.25rem;
+    width: 100%;
+  }
+
+  .about-info-row {
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .about-info-label {
+    max-width: 35%;
+  }
+
+  .about-info-value {
+    max-width: 65%;
+    white-space: normal;
+    text-align: right;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .hero-terminal {
+    width: 100%;
+  }
+
+  .hero-terminal > div:last-child {
+    padding: 1rem;
+    font-size: 0.78rem;
+  }
+
+  .hero-terminal-line {
+    line-height: 1.7;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .about-section {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .about-code-lines {
+    padding: 0.5rem;
+  }
+
+  .about-code-text {
+    font-size: 0.65rem;
+  }
+
+  .about-info-label,
+  .about-info-value {
+    font-size: 0.62rem;
+  }
+
+  .about-card {
+    padding: 1rem;
+  }
+}
