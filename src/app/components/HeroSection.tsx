@@ -148,7 +148,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            <div className="terminal-window float-anim">
+            <div className="terminal-window hero-terminal float-anim">
               <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
                 <span className="w-3 h-3 rounded-full bg-red-400/70" />
                 <span className="w-3 h-3 rounded-full bg-yellow-400/70" />
@@ -159,7 +159,7 @@ export default function HeroSection() {
                 {TERMINAL_LINES.map((line, i) => {
                   if (i >= visibleLines) return null;
                   return (
-                    <div key={`${line.output ?? line.command}-${i}`} className="leading-7">
+                    <div key={`${line.output ?? line.command}-${i}`} className="hero-terminal-line leading-7 break-words">
                       {line.prompt && <span className="text-primary">{line.prompt}</span>}
                       {line.command && <span className="text-foreground">{typedCommand[i] || ''}</span>}
                       {line.output && <span style={{ color: line.color }}>{line.output}</span>}
