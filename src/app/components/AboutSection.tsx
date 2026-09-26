@@ -76,7 +76,7 @@ export default function AboutSection() {
   const [hoveredLine, setHoveredLine] = useState<number | null>(null);
 
   return (
-    <section id="about" className="py-24 px-6 md:px-12 relative">
+    <section id="about" className="about-section py-24 px-6 md:px-12 relative">
       <div className="section-divider mb-16" />
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
@@ -88,10 +88,10 @@ export default function AboutSection() {
           <p className="font-mono text-muted-foreground text-sm">// about_hariom.js</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-start min-w-0">
           {/* Code Editor */}
-          <div className="reveal-left stagger-2">
-            <div className="terminal-window">
+          <div className="reveal-left stagger-2 min-w-0 max-w-full">
+            <div className="terminal-window about-code-editor">
               {/* Editor header */}
               <div className="terminal-header justify-between">
                 <div className="flex items-center gap-2">
@@ -106,11 +106,11 @@ export default function AboutSection() {
               </div>
 
               {/* Code lines */}
-              <div className="p-4 overflow-x-auto">
+              <div className="p-4 about-code-lines overflow-hidden">
                 {CODE_LINES.map((line) => (
                   <div
                     key={line.num}
-                    className="flex items-center gap-0 group cursor-default transition-colors duration-150 rounded"
+                    className="about-code-line flex items-center gap-0 group cursor-default transition-colors duration-150 rounded min-w-0"
                     style={{
                       background: hoveredLine === line.num ? 'rgba(0,212,255,0.05)' : 'transparent',
                     }}
@@ -118,7 +118,7 @@ export default function AboutSection() {
                     onMouseLeave={() => setHoveredLine(null)}
                   >
                     <span className="line-number text-muted-foreground select-none">{line.num}</span>
-                    <span className="font-mono text-sm py-0.5 px-2 whitespace-pre">
+                    <span className="about-code-text font-mono text-sm py-0.5 px-2 whitespace-pre min-w-0">
                       {renderCodeLine(line)}
                     </span>
                   </div>
@@ -128,8 +128,8 @@ export default function AboutSection() {
           </div>
 
           {/* About card */}
-          <div className="reveal-right stagger-3 space-y-6">
-            <div className="glass border border-border rounded-2xl p-8 border-glow-hover tilt-card">
+          <div className="reveal-right stagger-3 space-y-6 min-w-0 max-w-full">
+            <div className="about-card glass border border-border rounded-2xl p-8 border-glow-hover tilt-card">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-full overflow-hidden border border-primary/30">
                   <img
@@ -156,9 +156,9 @@ export default function AboutSection() {
                   { label: 'Languages', value: 'Hindi & English', color: 'text-secondary' },
                   { label: 'Mindset', value: 'Learn • Practice • Build', color: 'text-foreground' },
                 ].map((item) => (
-                  <div key={item.label} className="flex items-center justify-between py-2 border-b border-border/50">
-                    <span className="font-mono text-xs text-muted-foreground tracking-wider uppercase">{item.label}</span>
-                    <span className={`font-mono text-xs font-medium ${item.color}`}>{item.value}</span>
+                  <div key={item.label} className="about-info-row flex items-center justify-between py-2 border-b border-border/50 gap-4">
+                    <span className="about-info-label font-mono text-xs text-muted-foreground tracking-wider uppercase shrink-0">{item.label}</span>
+                    <span className={`about-info-value font-mono text-xs font-medium ${item.color} min-w-0 text-right`}>{item.value}</span>
                   </div>
                 ))}
               </div>
